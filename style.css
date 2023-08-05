@@ -37,9 +37,9 @@ html{
     width: 100%;
 }
 img{
-    /* height:500px; */
     height: 100%;
     width: 100%;
+    transform: scale(0.9);
 }
 #right-slide{
     display: flex;
@@ -48,8 +48,11 @@ img{
     flex-direction: column;
     row-gap: 30px;
     background-color: #575A85;
+    padding: 1rem 0;
 }
 #right-slide h1{
+    padding: 0 1rem;
+    font-size: 1.5rem;
     color: #B8BCCC;
 }
 #right-slide h1 span{
@@ -71,7 +74,7 @@ img{
     line-height: normal;
 }
 #address-details-container{
-    /* display:none; */
+    display:none;
     background-color: #000;
     color: #B8BCCC;
 }
@@ -85,13 +88,18 @@ img{
     text-align: left !important;
 }
 #location{
-    display: flex;
-    justify-content:flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     padding: 3rem 1rem;
-    row-gap: 5px;
+    gap: 5px;
 }
-#location .row{
-    flex: 2;
+#location .row span{
+    font-size: 1.2rem;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+#location .row p{
+    height: 100px;
 }
 #location .row > p{
     padding-bottom: 5px;
@@ -144,7 +152,7 @@ img{
     font-size:1.5rem;
     padding-top: 10px;
 }
-p span{
+#user-info span, #post-office span{
     position: absolute;
     right: 0;
 }
@@ -187,7 +195,3 @@ p span{
     line-height: normal;
     position: relative;
 }
-/* .post-card p span{
-    position: absolute;
-    right: 0;
-} */
